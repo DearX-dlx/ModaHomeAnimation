@@ -14,6 +14,10 @@
 @property (nonatomic, strong) UIImageView *imageV;
 /* 灰度蒙版*/
 @property (nonatomic, strong) UIView *grayView;
+/** 中文名字*/
+@property (nonatomic, strong) UILabel *name_L;
+/** 英文名字*/
+@property (nonatomic, strong) UILabel *namEng_L;
 
 - (void)scaleNeedCellImageVInCV:(UICollectionView *)cv;
 

@@ -23,6 +23,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UIBarButtonItem *itemL = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"夹克01"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    UIBarButtonItem *itemR = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"夹克02"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    self.navigationItem.leftBarButtonItem = itemL;
+    self.navigationItem.rightBarButtonItem = itemR;
+    
     [self.view addSubview:self.mainView];
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
@@ -63,7 +69,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
+    
     NSArray<ModaHomeCell *> *array = [self.mainView visibleCells];
     //NSLog(@"遍历开始");
     for (ModaHomeCell *cell in array) {
@@ -84,6 +90,7 @@
         _mainView.backgroundColor = [UIColor blackColor];
         _mainView.delegate = self;
         _mainView.dataSource = self;
+        _mainView.decelerationRate = 0.00f;
         
         [_mainView registerClass:[ModaHomeCell class] forCellWithReuseIdentifier:@"cellID"];
     }
