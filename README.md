@@ -1,6 +1,9 @@
 # ModaHomeAnimation
 moda operandi 首页动画效果<p>
-<img src="https://github.com/DearX-dlx/ModaHomeAnimation/blob/master/show.gif" width="320" height="577"/><p>
+
+show.gif![image](https://user-images.githubusercontent.com/8910510/130339549-2fbba497-1050-48d8-9e05-4359eb08da6c.png)
+
+  
 1、使用UICollectionViewController编写<p>
 2、可修改文字已经背景图片<p>
 
